@@ -32,13 +32,24 @@ export class UsersPage {
   ionViewDidEnter(){
     console.log('ionViewDidEnter');
   }
-  ionViewCanLeave(): boolean | Promise<void>{
+  ionViewCanLeave(): boolean | Promise<void> {
     console.log('ionViewCanLeave');
     const promise = new Promise ((resolve, reject) =>{
       setTimeout(() =>{
         resolve(); 
-      }, 1000);
+       }, 1000);
       });
     return promise; 
+  }
+
+  ionViewDidLeave(){
+    console.log('ionViewDidLeave');
+  }
+
+  ionViewWillLeave(){
+    console.log('ionViewWillLeave');
+  }
+  ionViewWillUnload(){
+    console.log('ionViewWillUnload');
   }
 }

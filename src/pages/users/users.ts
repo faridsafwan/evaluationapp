@@ -34,7 +34,7 @@ export class UsersPage {
   }
   ionViewCanLeave(): boolean | Promise<void> {
     console.log('ionViewCanLeave');
-    const promise = new Promise ((resolve, reject) =>{
+    const promise = new Promise<void>((resolve, reject) =>{
       setTimeout(() =>{
         resolve(); 
        }, 1000);

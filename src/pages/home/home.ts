@@ -10,8 +10,9 @@ export class HomePage {
   usrPage = UsersPage;
   
   constructor (private navCtrl: NavController){}
+  
   onGoToUsers(){
-    this.navCtrl.push(this.usrPage)
-    .catch((error => console.log('Access denied, Argument was '+error)));
+    this.navCtrl.push(UsersPage)
+    .catch((error) => console.log('Access denied, Argument was '+ error));
   }
 }
